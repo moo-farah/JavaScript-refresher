@@ -69,5 +69,5 @@ const filteredFruits = fruits.filter(fruit => fruit.length > 5);
 console.log(filteredFruits); // [ 'elderberry', 'banana' ]
 
 // Reducing an array
-const reducedFruits = fruits.reduce((acc, fruit) => acc + fruit, 0);
+const reducedFruits = fruits.reduce((acc, fruit) => acc + fruit, '');
 console.log(reducedFruits)
