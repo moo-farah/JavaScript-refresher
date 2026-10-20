@@ -53,13 +53,14 @@ console.log(counter()); // 3
 const memoize = (fn) => {
     const cache = new Map();
     return (x) => {
-        if (cache[x] !== undefined) {
+        if (cache.has(x)) {
             console.log('from memory')
-            return cache[x];
+            return cache.get(x);
         }
         console.log('calculating result')
-        cache[x] = fn(x);
-        return cache[x];
+        const result = fn(x);
+        cache.set(x, result);
+        return result;
     };
 };
 
